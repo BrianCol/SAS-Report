@@ -10,7 +10,7 @@
 Columns of ID Date Course Credit Grade
 Convert letter grade to numeric grade  */
 data final;
-	infile "/folders/myfolders/Stat224/Final/*.txt" dlm="@" dsd missover;
+	infile "/Data/*.txt" dlm="@" dsd missover;
 	input ID $ Date Course $ Credit Grade $;
 	if Grade = "A" then GPAgrade =4.0;
 	else if Grade = "A-" then GPAgrade =3.7;
